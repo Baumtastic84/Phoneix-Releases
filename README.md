@@ -15,11 +15,20 @@ Phoneix releases may include:
 - the offline Windows deployment kit
 - signed Raspberry Pi appliance images and manifests
 
+## Public release index
+
+`release-index.json` is the small public discovery pointer used by Forge for online Raspberry Pi appliance preparation. It names the current appliance release and files so Forge does not need to call GitHub's rate-limited Releases API or carry a GitHub token.
+
+The index is **not** the update trust boundary. Forge constructs download URLs only inside this repository, then verifies the downloaded appliance manifest with the embedded Phoneix public key and verifies the decompressed image SHA-256 before any drive write.
+
+When promoting a new Raspberry Pi appliance, update `release-index.json` only after the signed image and matching signed manifest have been published and smoke-tested.
+
 ## Release channels
 
 - `vX.Y.Z-beta.N` — beta/prerelease builds
 - `vX.Y.Z-dev.N` — developer/prerelease builds
 - `vX.Y.Z` — stable builds
+- `appliance-vX.Y.Z` — signed Raspberry Pi appliance builds
 
 ## Update trust
 
