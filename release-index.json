@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "raspberryPiAppliance": {
+    "releaseTag": "appliance-v0.11.0",
+    "imageVersion": "0.11.0",
+    "imageFileName": "phoneix-nest-appliance-raspberrypi-v0.11.0.img.xz",
+    "manifestFileName": "phoneix-nest-appliance-raspberrypi-v0.11.0-manifest.json",
+    "imageDownloadSizeBytes": 599610812
+  }
+}
